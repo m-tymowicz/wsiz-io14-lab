@@ -103,3 +103,9 @@ Podaj liczbę nr 6: 47
 Najmniejsza z podanych liczb to: 3.567
 Największa z podanych liczb to: 89.1
 ```
+
+#### 2.1
+
+Utwórz klasę `Program` zawierającą metodę `main`.
+
+Utwórz klasę `Employee` z polami składowymi: `firstname`, `lastname` oraz `age`.
