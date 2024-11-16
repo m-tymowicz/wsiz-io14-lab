@@ -85,3 +85,21 @@ Wczytaj liczbę naturalną. Rozpoczynając od wczytanej liczby wypisz, w kolejno
 Podaj liczbę: 13
 
 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0
+
+#### 1.8
+
+Znajdź najmniejszą i największą spośród wprowadzonych liczb rzeczywistych.
+
+```
+Podaj ilość liczb: 6
+
+Podaj liczbę nr 1: 33.2
+Podaj liczbę nr 2: 11
+Podaj liczbę nr 3: 89.1
+Podaj liczbę nr 4: 3.567
+Podaj liczbę nr 5: 66.9
+Podaj liczbę nr 6: 47
+
+Najmniejsza z podanych liczb to: 3.567
+Największa z podanych liczb to: 89.1
+```
