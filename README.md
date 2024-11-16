@@ -118,3 +118,17 @@ Do klasy `Employee` dodaj metodę `print` wypisującą na ekranie pracownika wg 
 
 Zweryfikuj poprawność działania metody: w metodzie `main` stwórz obiekt klasy `Employee`, ustaw wartości pól, a
 następnie wypisz przy pomocy nowo powstałej metody jego zawartość.
+
+#### 2.3
+
+Do klasy `Employee` dodaj metodę `read`, której zadaniem jest utworzenie i zaczytanie obiektu klasy `Employee`:
+
+```
+Podaj imię:      Jan
+Podaj nazwisko:  Kowalski
+Podaj wiek:      31
+```
+
+Jakiego typu powinna to być metoda: instancyjna czy statyczna?
+
+Zweryfikuj działanie metody wykorzystując wcześniej utworzoną metodę `print`.
