@@ -77,3 +77,11 @@ metody `nextDouble` klasy `Scanner`
 W celu ustalenia długości części dziesiętnej przy konwersji do łańcucha znaków użyj metody `printf`:
 
 `System.out.printf("Pole: %.2f", area)`
+
+#### 1.7
+
+Wczytaj liczbę naturalną. Rozpoczynając od wczytanej liczby wypisz, w kolejności malejącej, wszystkie liczby do zera.
+
+Podaj liczbę: 13
+
+13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0
