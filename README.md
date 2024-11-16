@@ -60,3 +60,20 @@ Podaj dzielnik: 9
 
 88 nie dzieli się przez 9
 ```
+
+#### 1.6
+
+Wczytaj promień. Oblicz i wypisz obwód i pole koła.
+
+```
+Podaj promień: 10.5
+
+Obwód: 65.97
+Pole: 346.36
+```
+
+Dla zwiększenia dokładności obliczeń możesz wykorzystać stałą: `Math.PI`. Do wczytania liczby rzeczywistej użyj
+metody `nextDouble` klasy `Scanner`
+W celu ustalenia długości części dziesiętnej przy konwersji do łańcucha znaków użyj metody `printf`:
+
+`System.out.printf("Pole: %.2f", area)`
