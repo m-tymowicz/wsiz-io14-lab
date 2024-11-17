@@ -170,3 +170,14 @@ Do klasy `Company` dodaj bezargumentową metodę `printEmployees` wypisującą l
 Jakiego typu powinna to być metoda: statyczna czy instancyjna?
 
 W głównej części programu przetestuj działanie metody `printEmployees` wykorzystując listę przedstawioną powyżej.
+
+#### 2.7
+
+Rozszerz metodę `add` klasy `Company` o sprawdzenie czy pracownik o takim imieniu, nazwisku i wieku znajduje się już na
+liście. W tym celu klasę `Employee` rozszerz o metodę `isEqual` przyjmującą jako argument inny obiekt klasy `Employee` i
+zwracającą informację czy obiekty posiadają takie same pola (`boolean`).
+
+Jeśli taki sam pracownik znajduje się już na liście, powininen zostać wypisany odpowiedni komunikat a pracownik nie
+powinien zostać ponownie dodany.
+
+`Pracownik o tych samych danych znajduje się już na liście!`
