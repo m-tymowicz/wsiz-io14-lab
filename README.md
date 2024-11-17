@@ -141,3 +141,16 @@ W głównym programie, bez wykorzystania metody `read`, utwórz obiekt klasy `Em
 wartościami: `Jan` `Kowalski` `31`.
 
 Wprowadź niezbędne modyfikacje umożliwiające wykonanie powyższego zadania.
+
+#### 2.5
+
+Utwórz klasę `Company` posiadającą prywatne pole `employees` typu `ArrayList<Employee>`.
+
+Do klasy `Company` dodaj metodę `add` przyjmującą jako argument obiekt klasy `Employee` i dodającą go do listy
+pracowników (`employees`).
+
+Kiedy należy zainicjalizować pole `employees`?
+
+Jakiego typu powinna być metoda `add`: instancyjna czy statyczna?
+
+W części głównej programu utwórz instancję klasy `Company` oraz dodaj do niej pracownika przy pomocy metody `add`.
