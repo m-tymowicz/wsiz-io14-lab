@@ -154,3 +154,19 @@ Kiedy należy zainicjalizować pole `employees`?
 Jakiego typu powinna być metoda `add`: instancyjna czy statyczna?
 
 W części głównej programu utwórz instancję klasy `Company` oraz dodaj do niej pracownika przy pomocy metody `add`.
+
+#### 2.6
+
+Do klasy `Company` dodaj bezargumentową metodę `printEmployees` wypisującą listę wszystkich pracowników w formacie:
+
+```
+--------------------
+1  Jan Kowalski 31
+2  Anna Kowalczyk 27
+3  Piotr Nowak 36
+--------------------
+```
+
+Jakiego typu powinna to być metoda: statyczna czy instancyjna?
+
+W głównej części programu przetestuj działanie metody `printEmployees` wykorzystując listę przedstawioną powyżej.
