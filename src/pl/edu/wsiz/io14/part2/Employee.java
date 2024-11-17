@@ -6,25 +6,30 @@ public class Employee {
     String firstname;
     String lastname;
     byte age;
-    
+
+    public Employee(String firstname, String lastname, byte age){
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.age = age;
+    }
+
     void print() {
         System.out.printf("%s %s %d", firstname, lastname, age);
     }
 
     static Employee read() {
         Scanner scanner = new Scanner(System.in);
-        Employee employee = new Employee();
 
         System.out.print("Podaj imię:         ");
-        employee.firstname = scanner.next();
+        String firstname = scanner.next();
 
         System.out.print("Podaj nazwisko:     ");
-        employee.lastname = scanner.next();
+        String lastname = scanner.next();
 
         System.out.print("Podaj wiek:         ");
-        employee.age = scanner.nextByte();
+        byte age = scanner.nextByte();
 
-        return employee;
+        return new Employee(firstname, lastname, age);
     }
 
 }

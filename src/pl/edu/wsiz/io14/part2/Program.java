@@ -2,13 +2,7 @@ package pl.edu.wsiz.io14.part2;
 
 public class Program {
     public static void main(String[] args) {
-//        Employee employee = new Employee();
-//
-//        employee.firstname = "Jan";
-//        employee.lastname = "Kowalski";
-//        employee.age = 30;
-
-        Employee employee = Employee.read();
+        Employee employee = new Employee("Jan", "Kowalski", (byte) 30);
 
         employee.print();
     }
