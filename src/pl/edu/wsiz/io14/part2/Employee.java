@@ -14,7 +14,7 @@ public class Employee {
     }
 
     void print() {
-        System.out.printf("%s %s %d", firstname, lastname, age);
+        System.out.printf("%s %s %d\n", firstname, lastname, age);
     }
 
     static Employee read() {

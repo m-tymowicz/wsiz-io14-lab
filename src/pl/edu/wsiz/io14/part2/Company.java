@@ -8,4 +8,16 @@ public class Company {
     public void add(Employee employee) {
         employees.add(employee);
     }
+
+    void printEmployees() {
+        System.out.println("--------------------");
+
+        for (Employee employee : employees) {
+            int index = employees.indexOf(employee);
+            System.out.print(index + 1 + "  ");
+            employee.print();
+        }
+
+        System.out.println("--------------------");
+    }
 }
