@@ -3,11 +3,11 @@ package pl.edu.wsiz.io14.part2;
 import java.util.Scanner;
 
 public class Employee {
-    String firstname;
-    String lastname;
-    byte age;
+    private final String firstname;
+    private final String lastname;
+    private final byte age;
 
-    public Employee(String firstname, String lastname, byte age){
+    public Employee(String firstname, String lastname, byte age) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.age = age;
@@ -30,6 +30,14 @@ public class Employee {
         byte age = scanner.nextByte();
 
         return new Employee(firstname, lastname, age);
+    }
+
+    boolean isEqual(Employee employee) {
+        boolean areFirstnamesSame = this.firstname.equalsIgnoreCase(employee.firstname);
+        boolean areLastnamesSame = this.lastname.equalsIgnoreCase(employee.lastname);
+        boolean areAgesSame = this.age == employee.age;
+
+        return areFirstnamesSame && areLastnamesSame && areAgesSame;
     }
 
 }

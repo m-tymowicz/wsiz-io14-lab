@@ -1,3 +1,5 @@
 /wsiz-io14-lab.iml
 /.idea/.gitignore
 /out/
+/.idea/*
+/wsiz-io14-lab_2.iml
