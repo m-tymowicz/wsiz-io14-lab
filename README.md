@@ -181,3 +181,11 @@ Jeśli taki sam pracownik znajduje się już na liście, powininen zostać wypis
 powinien zostać ponownie dodany.
 
 `Pracownik o tych samych danych znajduje się już na liście!`
+
+#### 2.8
+
+Do klasy `Company` dodaj bezargumentową metodę `add`, która samodzielnie zaczyta a następnie doda do listy pracownika.
+
+Metoda również nie powinna pozwalać na ponowne dodanie takiego samego pracownika.
+
+Jakiego typu powinna to być metoda: statyczna czy instancyjna?
