@@ -189,3 +189,12 @@ Do klasy `Company` dodaj bezargumentową metodę `add`, która samodzielnie zacz
 Metoda również nie powinna pozwalać na ponowne dodanie takiego samego pracownika.
 
 Jakiego typu powinna to być metoda: statyczna czy instancyjna?
+
+#### 2.9
+
+Do klasy `Company` dodaj metodę `removeEmployee` usuwającą pracownika z listy. Jako argument metoda powinna przyjmować
+numer porządkowy widoczny przed każdą osobą na liście wszystkich pracowników.
+
+Jeśli wprowadzony został niepoprawny numer aplikacja powinna wyświetlić stosowny komunikat:
+
+`Lista nie zawiera pracownika o podanym numerze porządkowym.`
