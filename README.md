@@ -248,3 +248,18 @@ Jan Kowalski 31 M
 ```
 
 Dokonaj pozostałych zmian niezbędnych do zrealizowania powyższych wymagań.
+
+
+#### 2.12
+
+Rozszerz klasę `Employee` o dodatkowe pole `salary` typu `int`. Zaktualizuj metody `read` i `print` klasy `Employee`
+oraz inne niezbędne miejsca w aplikacji.
+
+```
+Podaj zarobki:   3000
+```
+
+```
+Anna Kowalczyk 27 K 3000zł
+Jan Kowalski 31 M 2800zł
+```
