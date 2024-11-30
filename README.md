@@ -227,3 +227,24 @@ W przypadku podania niepoprawnego numeru powinien zostać wyświetlony odpowiedn
 
 Menu powinno być wyświetlane ponownie po wykonaniu jakiejkolwiek operacji innej niż zakończenie programu, również w
 przypadku wprowadzenia nieprawidłowego numeru operacji.
+
+#### 2.11
+
+Zdefiniuj nowy typ wyliczeniowy `Sex` (płeć) mogący przyjmować jedną z dwóch wartości: `FEMALE` (żeńska) oraz `MALE` (
+męska). Do klasy `Employee` dodaj nowe pole `sex` typu `Sex`. Metodę `read` klasy `Employee` poszerz o zaczytanie płci
+pracownika w postaci:
+
+```
+Podaj płeć:      K
+```
+
+Aplikacja powinna zaczytać płeć jako `String`, jeśli pierwszym znakiem jest `K` lub `k` powinna ustawić płeć na `FEMALE`
+w przeciwnym wypadku `MALE`. Metoda `print` klasy `Employee` powinna zostać rozszerzona o wypisanie płci przy użyciu
+liter `K` / `M`, jak poniżej:
+
+```
+Anna Kowalczyk 27 K
+Jan Kowalski 31 M
+```
+
+Dokonaj pozostałych zmian niezbędnych do zrealizowania powyższych wymagań.
