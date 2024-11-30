@@ -10,5 +10,9 @@ public class Program {
         company.add( new Employee("Piotr", "Kowalczyk", (byte) 35));
 
         company.printEmployees();
+
+        company.add();
+
+        company.printEmployees();
     }
 }
