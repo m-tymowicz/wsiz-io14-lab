@@ -17,10 +17,14 @@ public abstract class Employee {
         this.skills = skills;
     }
 
-    void print() {
+    public String toString() {
         char sexChar = this.sex == Sex.FEMALE ? 'K' : 'M';
         String skillsStr = String.join(", ", skills);
-        System.out.printf("%s %s %d %s %dzł [%s]\n", firstname, lastname, age, sexChar, salary, skillsStr);
+        return String.format("%s %s %d %s %dzł [%s]", firstname, lastname, age, sexChar, salary, skillsStr);
+    }
+
+    void print() {
+        System.out.println(this.toString());
     }
 
     boolean isEqual(Employee employee) {

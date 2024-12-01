@@ -37,4 +37,9 @@ public class Manager extends Employee {
 
         return new Manager(firstname, lastname, age, sex, salary, skills);
     }
+
+    @Override
+    public String toString() {
+        return "K " + super.toString();
+    }
 }

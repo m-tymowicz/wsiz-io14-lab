@@ -37,4 +37,9 @@ public class Developer extends Employee {
 
         return new Developer(firstname, lastname, age, sex, salary, skills);
     }
+
+    @Override
+    public String toString() {
+        return "P " + super.toString();
+    }
 }
