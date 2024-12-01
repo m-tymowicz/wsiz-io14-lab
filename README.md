@@ -281,3 +281,23 @@ Jan Kowalski 31 M 2800zł [C#, JS]
 W celu zaczytania całej linii wykorzystaj metodę `nextLine` klasy `Scanner`. Aby podzielić ciąg znaków na fragmenty (
 tablicę łańcuchów) wykorzystaj metodę `split` klasy `String`. Odwrotną operację można przeprowadzić za pomocą statycznej
 metody `join` klasy `String`. Metoda `trim` pozwala na usunięcie spacji z początku i końca łańcucha znaków.
+
+#### 2.14
+
+Klasę `Employee` oznacz jako abstrakcyjną `abstract`.
+
+Utwórz dwie nowe klasy rozszerzające klasę `Employee`: `Developer` i `Manager`.
+
+Przekształć menu programu do postaci:
+
+```
+Lista operacji:
+
+1 - wypisz listę pracowników
+2 - dodaj programistę
+3 - dodaj kierownika
+4 - usuń pracownika
+9 - zakończ program
+
+Podaj numer operacji:
+``` 
