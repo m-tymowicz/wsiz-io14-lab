@@ -301,3 +301,13 @@ Lista operacji:
 
 Podaj numer operacji:
 ``` 
+
+#### 2.15
+
+Zaktualizuj metodę wypisującą pracownika (`print`) o przedrostek `P` dla programisty (`Developer`) oraz
+`K` dla kierownika (`Manager`)
+
+```
+K Anna Kowalczyk 27 K 3000zł [Scrum]
+P Jan Kowalski 31 M 2800zł [C#, JS]
+```
