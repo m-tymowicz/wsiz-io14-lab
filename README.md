@@ -263,3 +263,21 @@ Podaj zarobki:   3000
 Anna Kowalczyk 27 K 3000zł
 Jan Kowalski 31 M 2800zł
 ```
+
+#### 2.13
+
+Rozszerz klasę `Employee` o dodatkowe pole `skills` typu `String[]`. Zaktualizuj metodę `read` i `print`
+klasy `Employee` oraz inne niezbędne miejsca w aplikacji.
+
+```
+Podaj umiejętności: Java, SQL,     HTML,CSS   
+```
+
+```
+Anna Kowalczyk 27 K 3000zł [Java, SQL, HTML, CSS]
+Jan Kowalski 31 M 2800zł [C#, JS]
+```
+
+W celu zaczytania całej linii wykorzystaj metodę `nextLine` klasy `Scanner`. Aby podzielić ciąg znaków na fragmenty (
+tablicę łańcuchów) wykorzystaj metodę `split` klasy `String`. Odwrotną operację można przeprowadzić za pomocą statycznej
+metody `join` klasy `String`. Metoda `trim` pozwala na usunięcie spacji z początku i końca łańcucha znaków.
