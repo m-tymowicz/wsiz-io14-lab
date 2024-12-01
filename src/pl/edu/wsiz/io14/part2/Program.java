@@ -7,18 +7,19 @@ public class Program {
         Scanner scanner = new Scanner(System.in);
         Company company = new Company();
 
-        company.add(new Employee("Jan", "Kowalski", (byte) 30, Sex.MALE, 2800, new String[]{"PHP", "Java", "CSS"}));
-        company.add(new Employee("Anna", "Nowak", (byte) 27, Sex.FEMALE, 4000, new String[]{"JS", "HTML", "CSS"}));
-        company.add(new Employee("Piotr", "Kowalczyk", (byte) 35, Sex.MALE, 3500, new String[]{"Java", "CSS"}));
-        company.add(new Employee("Piotr", "Kowalczyk", (byte) 35, Sex.MALE, 3000, new String[]{"Project Mgm"}));
+        company.add(new Developer("Jan", "Kowalski", (byte) 30, Sex.MALE, 2800, new String[]{"PHP", "Java", "CSS"}));
+        company.add(new Manager("Anna", "Nowak", (byte) 27, Sex.FEMALE, 4000, new String[]{"JS", "HTML", "CSS"}));
+        company.add(new Manager("Piotr", "Kowalczyk", (byte) 35, Sex.MALE, 3500, new String[]{"Java", "CSS"}));
+        company.add(new Developer("Piotr", "Kowalczyk", (byte) 35, Sex.MALE, 3000, new String[]{"Project Mgm"}));
 
         int operation;
 
         do {
             System.out.println("\nLista operacji:\n");
             System.out.println("1 - wypisz listę pracowników");
-            System.out.println("2 - dodaj pracownika");
-            System.out.println("3 - usuń pracownika");
+            System.out.println("2 - dodaj programistę");
+            System.out.println("3 - dodaj kierownika");
+            System.out.println("4 - usuń pracownika");
             System.out.println("9 - zakończ program\n");
             System.out.print("Podaj numer operacji: ");
 
@@ -30,10 +31,16 @@ public class Program {
                     break;
 
                 case 2:
-                    company.add();
+                    Developer developer = Developer.read();
+                    company.add(developer);
                     break;
 
                 case 3:
+                    Manager manager = Manager.read();
+                    company.add(manager);
+                    break;
+
+                case 4:
                     System.out.print("Podaj numer pracownika do usunięcia: ");
                     int employeeIndex = scanner.nextInt();
                     company.removeEmployee(employeeIndex);

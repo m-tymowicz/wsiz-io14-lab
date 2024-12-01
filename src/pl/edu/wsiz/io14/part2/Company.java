@@ -22,12 +22,6 @@ public class Company {
         }
     }
 
-    void add() {
-        Employee employee = Employee.read();
-
-        add(employee);
-    }
-
     void removeEmployee(int index) {
         boolean isIndexValid = index >= 1 && index <= employees.size();
         if (isIndexValid) {
