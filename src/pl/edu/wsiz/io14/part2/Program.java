@@ -7,10 +7,10 @@ public class Program {
         Scanner scanner = new Scanner(System.in);
         Company company = new Company();
 
-        company.add(new Employee("Jan", "Kowalski", (byte) 30, Sex.MALE));
-        company.add(new Employee("Anna", "Nowak", (byte) 27, Sex.FEMALE));
-        company.add(new Employee("Piotr", "Kowalczyk", (byte) 35, Sex.MALE));
-        company.add(new Employee("Piotr", "Kowalczyk", (byte) 35,Sex.MALE));
+        company.add(new Employee("Jan", "Kowalski", (byte) 30, Sex.MALE, 2800));
+        company.add(new Employee("Anna", "Nowak", (byte) 27, Sex.FEMALE, 4000));
+        company.add(new Employee("Piotr", "Kowalczyk", (byte) 35, Sex.MALE, 3500));
+        company.add(new Employee("Piotr", "Kowalczyk", (byte) 35,Sex.MALE, 3000));
 
         int operation;
 
