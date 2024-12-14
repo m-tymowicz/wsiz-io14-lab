@@ -4,6 +4,11 @@ import java.util.ArrayList;
 
 public class Company {
     private final ArrayList<Employee> employees = new ArrayList<>();
+    private final ConsoleLogger logger;
+
+    public Company(ConsoleLogger logger) {
+        this.logger = logger;
+    }
 
     public void add(Employee newEmployee) {
 
@@ -16,18 +21,20 @@ public class Company {
         }
 
         if (exists) {
-            System.out.println("Pracownik o tych samych danych znajduje się już na liście!");
+            logger.error(String.format("Próba dodania pracownika o tych samych danych: %s", newEmployee));
         } else {
             employees.add(newEmployee);
+            logger.info(String.format("Pracownik dodany (%s)", newEmployee));
         }
     }
 
     void removeEmployee(int index) {
         boolean isIndexValid = index >= 1 && index <= employees.size();
         if (isIndexValid) {
-            employees.remove(index - 1);
+            Employee removedEmployee = employees.remove(index - 1);
+            logger.info(String.format("Pracownik usunięty (%s)", removedEmployee));
         } else {
-            System.out.println("Lista nie zawiera pracownika o podanym numerze porządkowym.");
+            logger.error("Próba usunięcia pracownika o niepoprawnym numerze porządkowym: " + index);
         }
     }
 
