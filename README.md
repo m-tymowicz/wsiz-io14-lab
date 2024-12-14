@@ -325,3 +325,16 @@ Podaj rozm. zespołu: 5
 K Anna Kowalczyk 27 K 3000zł [Scrum] 5
 P Jan Kowalski 31 M 2800zł [C#, JS]
 ```
+
+#### 2.17
+
+Do klasy `Employee` dodaj abstrakcyjną metodę `getTotalSalary` zwracającą całkowite wynagrodzenie pracownika (`double`).
+Zaimplementuj metodę `getTotalSalary` w klasach `Developer` i `Manager` zgodnie z poniższymi wymaganiami:
+
+- całkowite wynagrodzenie programisty powinno uwzględniać bonus za znajomość technologi - 2% (kwoty podstawowej) za
+  każdą technologię
+
+- całkowite wynagrodzenie kierownika powinno zawierać bonus za wielkość zespołu, którym kieruje - 5% (kwoty podstawowej)
+  za każde 5 osób w zespole.
+
+Zaktualizuj metodę `print` aby wypisywała całkowite wynagrodzenie zamiast podstawowego.
