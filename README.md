@@ -338,3 +338,48 @@ Zaimplementuj metodę `getTotalSalary` w klasach `Developer` i `Manager` zgodnie
   za każde 5 osób w zespole.
 
 Zaktualizuj metodę `print` aby wypisywała całkowite wynagrodzenie zamiast podstawowego.
+
+
+#### 2.18
+
+Utwórz klasę `ConsoleLogger` implementującą dwie metody: `info` oraz `error`.
+Każda z metod jako parametr powinna przyjmować tekst do wypisania.
+
+Metody powinny wypisywać do konsoli zadany tekst w formacie:
+
+```
+INFO : mój log
+ERROR: mój log
+```
+gdzie `mój log` to podany tekst.
+
+
+Klasę `Company` rozszerz o prywatne pole `logger` typu `ConsoleLogger`.
+
+Rozszerz konstruktor klasy `Company` o możliwość zainicjalizowania pola `logger`,
+dokonaj niezbędnych poprawek w pozostałej części programu.
+
+
+Rozszerz metodę `addEmployee` klasy `Company` o dodanie loga w przypadku poprawnego dodania pracownika:
+
+```
+INFO: Pracownik dodany (K Anna Kowalczyk 27 K 3000zł [Scrum] 5)
+```
+
+oraz w przypadku powtórzenia danych:
+
+```
+ERROR: Próba dodania pracownika o tych samych danych: K Anna Kowalczyk 27 K 3000zł [Scrum] 5
+```
+
+Rozszerz metodę `removeEmployee` klasy `Company` o dodanie loga w przypadku poprawnego usunięcia pracownika:
+
+```
+INFO: Pracownik usunięty (K Anna Kowalczyk 27 K 3000zł [Scrum] 5)
+```
+
+oraz w przypadku nieodnalezienia pracownika o podanym numerze:
+
+```
+ERROR: Próba usunięcia pracownika o niepoprawnym numerze porządkowym: 6
+```
