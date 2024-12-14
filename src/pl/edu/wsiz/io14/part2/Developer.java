@@ -7,6 +7,13 @@ public class Developer extends Employee {
         super(firstname, lastname, age, sex, salary, skills);
     }
 
+    @Override
+    public double getTotalSalary() {
+        double bonus = getSkills().length * 0.02 * getSalary();
+
+        return getSalary() + bonus;
+    }
+
     static Developer read() {
         Scanner scanner = new Scanner(System.in);
 

@@ -11,6 +11,14 @@ public class Manager extends Employee {
         this.teamSize = teamSize;
     }
 
+    @Override
+    public double getTotalSalary() {
+        int bonusLevel = teamSize / 5;
+        double bonus = bonusLevel * 0.05 * getSalary();
+
+        return getSalary() + bonus;
+    }
+
     static Manager read() {
         Scanner scanner = new Scanner(System.in);
 
@@ -45,6 +53,7 @@ public class Manager extends Employee {
 
         return new Manager(firstname, lastname, age, sex, salary, skills, teamSize);
     }
+
 
     @Override
     public String toString() {

@@ -6,6 +6,7 @@ public abstract class Employee {
     private final byte age;
     private final Sex sex;
     private final int salary;
+
     private final String[] skills;
 
     public Employee(String firstname, String lastname, byte age, Sex sex, int salary, String[] skills) {
@@ -17,14 +18,25 @@ public abstract class Employee {
         this.skills = skills;
     }
 
+    public String[] getSkills() {
+        return skills;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+
+    public abstract double getTotalSalary();
+
+    @Override
     public String toString() {
         char sexChar = this.sex == Sex.FEMALE ? 'K' : 'M';
         String skillsStr = String.join(", ", skills);
-        return String.format("%s %s %d %s %dzł [%s]", firstname, lastname, age, sexChar, salary, skillsStr);
+        return String.format("%s %s %d %s %.2fzł [%s]", firstname, lastname, age, sexChar, getTotalSalary(), skillsStr);
     }
 
     void print() {
-        System.out.println(this.toString());
+        System.out.println(this);
     }
 
     boolean isEqual(Employee employee) {
