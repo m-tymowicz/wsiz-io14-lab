@@ -383,3 +383,45 @@ oraz w przypadku nieodnalezienia pracownika o podanym numerze:
 ```
 ERROR: Próba usunięcia pracownika o niepoprawnym numerze porządkowym: 6
 ```
+
+#### 2.19
+
+Utwórz klasę `FileLogger` implementującą metody: `info` i `error`. Klasa powinna zawierać prywatne pole `writer`
+typu `PrintWriter`. Konstruktor klasy `FileLogger` powinien przyjąć następującą postać:
+
+```
+public FileLogger(String fileName) {
+    try {
+        FileOutputStream fileStream = new FileOutputStream(fileName, true);
+        this.writer = new PrintWriter(fileStream, true);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
+```
+
+Klasa `PrintWriter` posiada metodę `printf`. Metody `info` i `error`, za pomocą obiektu `writer`, powinny zapisywać logi
+w postaci:
+
+```
+[27-02-2021 10:00:00] INFO : mój log
+[27-02-2021 10:01:00] ERROR: mój log
+```
+
+W celu uzyskania aktualnego czasu należy utworzyć instancję klasy `Date`:
+
+```
+Date now = new Date();
+```
+
+Do sformatowania daty można wykorzystać klasę `SimpleDateFormat`:
+
+```
+SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+String dateTimeString = simpleDateFormat.format(now);
+```
+
+W klasie `Company` zamień typ pola `logger` na `FileLogger`.
+Utwórz i przekaż do klasy `Company` instancję klasy `FileLogger` zapisującą logi do pliku `company-log.txt`
+
+Przetestuj działanie programu.
