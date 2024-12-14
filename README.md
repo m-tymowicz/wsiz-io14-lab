@@ -311,3 +311,17 @@ Zaktualizuj metodę wypisującą pracownika (`print`) o przedrostek `P` dla prog
 K Anna Kowalczyk 27 K 3000zł [Scrum]
 P Jan Kowalski 31 M 2800zł [C#, JS]
 ```
+
+#### 2.16
+
+Rozszerz klasę `Manager` o dodatkowe pole `teamSize` typu `int`.
+Zaktualizuj metodę `read` i `print` klasy `Manager` oraz inne niezbędne miejsca w aplikacji.
+
+```
+Podaj rozm. zespołu: 5
+```
+
+```
+K Anna Kowalczyk 27 K 3000zł [Scrum] 5
+P Jan Kowalski 31 M 2800zł [C#, JS]
+```
