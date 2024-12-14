@@ -3,8 +3,12 @@ package pl.edu.wsiz.io14.part2;
 import java.util.Scanner;
 
 public class Manager extends Employee {
-    public Manager(String firstname, String lastname, byte age, Sex sex, int salary, String[] skills) {
+
+    private final int teamSize;
+
+    public Manager(String firstname, String lastname, byte age, Sex sex, int salary, String[] skills, int teamSize) {
         super(firstname, lastname, age, sex, salary, skills);
+        this.teamSize = teamSize;
     }
 
     static Manager read() {
@@ -35,11 +39,15 @@ public class Manager extends Employee {
             skills[i] = skills[i].trim();
         }
 
-        return new Manager(firstname, lastname, age, sex, salary, skills);
+        System.out.print("Podaj rozm. zespołu:");
+        int teamSize = scanner.nextInt();
+        scanner.nextLine();
+
+        return new Manager(firstname, lastname, age, sex, salary, skills, teamSize);
     }
 
     @Override
     public String toString() {
-        return "K " + super.toString();
+        return String.format("K %s %d", super.toString(), teamSize);
     }
 }

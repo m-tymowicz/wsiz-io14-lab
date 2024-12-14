@@ -8,8 +8,8 @@ public class Program {
         Company company = new Company();
 
         company.add(new Developer("Jan", "Kowalski", (byte) 30, Sex.MALE, 2800, new String[]{"PHP", "Java", "CSS"}));
-        company.add(new Manager("Anna", "Nowak", (byte) 27, Sex.FEMALE, 4000, new String[]{"JS", "HTML", "CSS"}));
-        company.add(new Manager("Piotr", "Kowalczyk", (byte) 35, Sex.MALE, 3500, new String[]{"Java", "CSS"}));
+        company.add(new Manager("Anna", "Nowak", (byte) 27, Sex.FEMALE, 4000, new String[]{"JS", "HTML", "CSS"}, 3));
+        company.add(new Manager("Piotr", "Kowalczyk", (byte) 35, Sex.MALE, 3500, new String[]{"Java", "CSS"}, 7));
         company.add(new Developer("Piotr", "Kowalczyk", (byte) 35, Sex.MALE, 3000, new String[]{"Project Mgm"}));
 
         int operation;
