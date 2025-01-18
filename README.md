@@ -441,3 +441,15 @@ Pole `logger` klasy `Company` powinno przyjąć typ `Logger`.
 Zmodyfikuj klasę `FileLogger` aby pozwalała na wybór poziomu logowania.
 W tym celu dodaj do konstruktora dwa parametry typu `boolean`: `logInfo` i `logError`.
 Ustawienie flagi na true oznacza włączenie odpowiedniego poziomu logowania.
+
+
+#### 2.22
+
+Wymagane jest skonfigurowanie logowania w taki sposób, aby wszystkie logi poziomu `info` trafiały do pliku:
+`company-info-log.txt`, natomiast wszystkie logi poziomu `error` do pliku: `company-error-log.txt`.
+Dodatkowo wszystkie logi powinny trafiać również na konsolę.
+
+Zaprojektuj klasę `MultiLogger` implementującą interfejs `Logger` i przyjmującą jako argument konstruktora
+tablicę obiektów typu `Logger`.
+Implementacja metod `info` i `error` powinna polegać na wykonaniu korespondującej metody na przesłanych
+uprzednio obiektach typu `Logger`, klasa ta powinna pełnić jedynie rolę pośrednika.
