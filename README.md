@@ -434,3 +434,10 @@ W tym celu zaprojektuj i zdefiniuj nowy interfejs `Logger`, pozwalający na tak�
 
 Nowy interfejs powinien być implementowany przez klasy: `ConsoleLogger` oraz `FileLogger`.
 Pole `logger` klasy `Company` powinno przyjąć typ `Logger`.
+
+
+#### 2.21
+
+Zmodyfikuj klasę `FileLogger` aby pozwalała na wybór poziomu logowania.
+W tym celu dodaj do konstruktora dwa parametry typu `boolean`: `logInfo` i `logError`.
+Ustawienie flagi na true oznacza włączenie odpowiedniego poziomu logowania.
