@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Program {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        FileLogger fileLogger = new FileLogger("company-log.txt");
+        FileLogger fileLogger = new FileLogger("company-log.txt", false, true);
 //        ConsoleLogger consoleLogger = new ConsoleLogger();
         Company company = new Company(fileLogger);
 
