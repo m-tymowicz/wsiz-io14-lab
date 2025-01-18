@@ -425,3 +425,12 @@ W klasie `Company` zamień typ pola `logger` na `FileLogger`.
 Utwórz i przekaż do klasy `Company` instancję klasy `FileLogger` zapisującą logi do pliku `company-log.txt`
 
 Przetestuj działanie programu.
+
+
+#### 2.20
+
+Klasa `Company` powinna pozwalać na współpracę z dowolnym typem klasy zapisującej logi.
+W tym celu zaprojektuj i zdefiniuj nowy interfejs `Logger`, pozwalający na taką współpracę.
+
+Nowy interfejs powinien być implementowany przez klasy: `ConsoleLogger` oraz `FileLogger`.
+Pole `logger` klasy `Company` powinno przyjąć typ `Logger`.
