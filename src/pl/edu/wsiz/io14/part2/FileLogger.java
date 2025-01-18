@@ -2,9 +2,11 @@ package pl.edu.wsiz.io14.part2;
 
 import java.io.FileOutputStream;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class FileLogger {
-
+    private final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
     private PrintWriter writer;
 
     public FileLogger(String fileName) {
@@ -17,10 +19,14 @@ public class FileLogger {
     }
 
     public void info(String message) {
-        this.writer.printf("INFO : %s\n", message);
+        this.writer.printf("[%s] INFO : %s\n", getCurrentDateTimeString(), message);
     }
 
     public void error(String message) {
-        this.writer.printf("ERROR: %s\n", message);
+        this.writer.printf("[%s] ERROR: %s\n", getCurrentDateTimeString(), message);
+    }
+
+    private String getCurrentDateTimeString() {
+        return simpleDateFormat.format(new Date());
     }
 }
