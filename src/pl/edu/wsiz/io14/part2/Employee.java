@@ -1,5 +1,8 @@
 package pl.edu.wsiz.io14.part2;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+
 public abstract class Employee {
     private final String firstname;
     private final String lastname;
@@ -48,4 +51,20 @@ public abstract class Employee {
         return areFirstnamesSame && areLastnamesSame && areAgesSame && areSexesSame;
     }
 
+    protected static String[] parseSkills(String skillsStr){
+        ArrayList<String> uniqueSkills = new ArrayList<>();
+        HashSet<String> skillsSet = new HashSet<>();
+
+        String[] skills = skillsStr.split(",");
+        for (String skill : skills) {
+            skill = skill.trim();
+
+            if(!skillsSet.contains(skill.toLowerCase())){
+                skillsSet.add(skill.toLowerCase());
+                uniqueSkills.add(skill);
+            }
+        }
+
+        return uniqueSkills.toArray(new String[0]);
+    }
 }

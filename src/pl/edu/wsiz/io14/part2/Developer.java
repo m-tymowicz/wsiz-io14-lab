@@ -37,10 +37,7 @@ public class Developer extends Employee {
 
         System.out.print("Podaj umiejętności: ");
         String skillsStr = scanner.nextLine();
-        String[] skills = skillsStr.split(",");
-        for (int i = 0; i < skills.length; i++) {
-            skills[i] = skills[i].trim();
-        }
+        String[] skills = parseSkills(skillsStr);
 
         return new Developer(firstname, lastname, age, sex, salary, skills);
     }

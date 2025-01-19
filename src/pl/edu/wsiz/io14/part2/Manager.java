@@ -42,10 +42,7 @@ public class Manager extends Employee {
 
         System.out.print("Podaj umiejętności: ");
         String skillsStr = scanner.nextLine();
-        String[] skills = skillsStr.split(",");
-        for (int i = 0; i < skills.length; i++) {
-            skills[i] = skills[i].trim();
-        }
+        String[] skills = parseSkills(skillsStr);
 
         System.out.print("Podaj rozm. zespołu:");
         int teamSize = scanner.nextInt();
