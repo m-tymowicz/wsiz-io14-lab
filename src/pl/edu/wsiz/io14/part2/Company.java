@@ -1,6 +1,7 @@
 package pl.edu.wsiz.io14.part2;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Company {
     private final ArrayList<Employee> employees = new ArrayList<>();
@@ -48,5 +49,46 @@ public class Company {
         }
 
         System.out.println("--------------------");
+    }
+
+    public void printSalaryBySkill() {
+        HashMap<String, ArrayList<Double>> skillWithSalaries = new HashMap<>();
+
+        for (Employee employee : employees) {
+            for (String skill : employee.getSkills()) {
+                if (!skillWithSalaries.containsKey(skill)) {
+                    skillWithSalaries.put(skill, new ArrayList<>());
+                }
+
+                skillWithSalaries.get(skill).add(employee.getTotalSalary());
+            }
+        }
+
+        // find max skill length
+        int maxSkillLength = 0;
+        for (String skill : skillWithSalaries.keySet()) {
+            if (skill.length() > maxSkillLength) {
+                maxSkillLength = skill.length();
+            }
+        }
+
+        // build format string with maxSkillLength
+        String format = "%-" + (maxSkillLength + 2) + "s%.2fzł\n";
+
+        // add empty line at the beginning
+        System.out.println();
+
+        for (String skill : skillWithSalaries.keySet()) {
+            ArrayList<Double> salaries = skillWithSalaries.get(skill);
+
+            double sum = 0;
+            for (Double salary : salaries) {
+                sum += salary;
+            }
+
+            double average = sum / salaries.size();
+
+            System.out.printf(format, skill, average);
+        }
     }
 }

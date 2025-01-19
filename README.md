@@ -475,7 +475,7 @@ Aby sprawdzić, czy element znajduje się już w zbiorze wykorzystaj metodę `co
 Do głównego menu programu dodaj dodatkową opcję:
 
 ```
-5 - Wypisz średnie zarobki dla umiejętności
+5 - wypisz średnie zarobki dla umiejętności
 ```
 
 Po wybraniu tej opcji program powinien znaleźć unikalną listę wszystkich umiejętności spośród wszystkich pracowników,
