@@ -453,3 +453,18 @@ Zaprojektuj klasę `MultiLogger` implementującą interfejs `Logger` i przyjmuj�
 tablicę obiektów typu `Logger`.
 Implementacja metod `info` i `error` powinna polegać na wykonaniu korespondującej metody na przesłanych
 uprzednio obiektach typu `Logger`, klasa ta powinna pełnić jedynie rolę pośrednika.
+
+#### 2.23
+
+Podczas wprowadzania umiejętności nowego pracownika możliwe jest wielokrotne powtórzenie tej samej umiejętności:
+
+```
+Podaj umiejętności: Java, SQL, HTML,sql, JAVA
+```
+
+Zabezpiecz program przed taką sytuacją.
+
+W tym celu wykorzystaj strukturę `HashSet` (`HashSet<String> uniqueSkills = new HashSet<>()`)
+
+W celu dodania wartości do `HashSet` użyj metody `add`: `uniqueSkills.add(skill)`
+Aby sprawdzić, czy element znajduje się już w zbiorze wykorzystaj metodę `contains`: `uniqueSkills.contains(skill)`
