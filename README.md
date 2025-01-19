@@ -468,3 +468,28 @@ W tym celu wykorzystaj strukturę `HashSet` (`HashSet<String> uniqueSkills = new
 
 W celu dodania wartości do `HashSet` użyj metody `add`: `uniqueSkills.add(skill)`
 Aby sprawdzić, czy element znajduje się już w zbiorze wykorzystaj metodę `contains`: `uniqueSkills.contains(skill)`
+
+
+#### 2.24
+
+Do głównego menu programu dodaj dodatkową opcję:
+
+```
+5 - Wypisz średnie zarobki dla umiejętności
+```
+
+Po wybraniu tej opcji program powinien znaleźć unikalną listę wszystkich umiejętności spośród wszystkich pracowników,
+następnie dla każdej z umiejętności powinien wyliczyć średnią zarobków dla wszystkich pracowników posiadających tę umiejętność.
+
+Wyniki powinny zostać wypisane w postaci:
+
+```
+SQL          3000.00zł
+Java         2750.50zł
+Project Mgm  3250.00zł
+```
+W celu uzyskania zadanej szerokości lewej kolumny wykorzystaj opcję formatowania: `%-14s`.
+
+Do przechowywania unikalnych wartości umiejętności oraz odpowiadających im zarobków wykorzystaj strukturę: `HashMap`:
+`HashMap<String, ArrayList<Double>>`.
+
